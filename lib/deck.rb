@@ -35,6 +35,20 @@ class Deck
     self
   end
 
+  # asterisk allows method to take multiple arguments as an array
+  # aka a "splat"
+  # example:
+  # hand_a = []
+  # hand_b = []
+  # hand_c = []
+  # deal(5, hand_a, hand_b, hand_c)
   def deal(cards, *hands)
+    # deal the number of cards requested into the number of hands requested
+    # one at a time
+    cards.times do
+      hands.each do |hand|
+        hand << draw
+      end
+    end
   end
 end
