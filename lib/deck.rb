@@ -28,7 +28,6 @@ class Deck
   def draw
     # deck here is a METHOD, defined by attr_reader, that returns @deck
     deck.shift
-    self
   end
 
   def shuffle
